@@ -1,0 +1,127 @@
+/* ============== RESET & CUSTOM PROPERTIES ============== */
+* { box-sizing: border-box; }
+
+:root {
+  /* ===== NEUTRAL RAMP (foundation / structure) ===== */
+  --n-0:   #FFFFFF;
+  --n-25:  #FAFAFB;
+  --n-50:  #F4F4F7;
+  --n-100: #EAEAEF;
+  --n-200: #DCDCE4;
+  --n-300: #C2C2CE;
+
+  --ink-1: #16162A;
+  --ink-2: #4A4A5C;
+  --ink-3: #6E6E82;
+
+  /* ===== BRAND (the single accent) ===== */
+  --brand:             #6E2BD9;
+  --brand-strong:      #571FAE;
+  --brand-weak:        #F3EDFD;
+  --brand-weak-border: #E0D2F7;
+  --brand-ring:        rgba(110, 43, 217, 0.20);
+
+  /* ===== SEMANTIC (status only, SLDS-aligned) ===== */
+  --success: #2E844A; --success-bg: #EBF7ED; --success-text: #1A4D24;
+  --warning: #DD7A01; --warning-bg: #FEF3E4; --warning-text: #7A4906;
+  --danger:  #BA0517; --danger-bg:  #FEE9E6; --danger-text:  #8A0511;
+  --info-bg: var(--brand-weak); --info-text: var(--brand-strong);
+
+  /* ===== CATEGORICAL (per-person identity, reused everywhere) ===== */
+  --person-tom:    #6E2BD9;
+  --person-colin:  #0E7C7B;
+  --person-steve:  #C7710A;
+  --person-rachel: #B5377F;
+  --person-team:   #6E6E82;
+
+  /* ===== SPACING (4px grid) ===== */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+
+  /* ===== RADII ===== */
+  --r-sm:   4px;
+  --r-md:   8px;
+  --r-pill: 999px;
+
+  /* ===== TYPE SCALE ===== */
+  --text-xs:   11px;
+  --text-sm:   12px;
+  --text-base: 13px;
+  --text-md:   14px;
+  --text-lg:   16px;
+  --text-xl:   20px;
+  --text-2xl:  24px;
+
+  /* ===== ELEVATION (two tiers only) ===== */
+  --shadow-1: 0 1px 2px rgba(22, 22, 42, 0.06);
+  --shadow-2: 0 12px 32px rgba(22, 22, 42, 0.22);
+
+  /* ===== AGENTFORCE (AI surfaces only) ===== */
+  --af-gradient: linear-gradient(120deg, #6E2BD9 0%, #1B96FF 100%);
+
+  /* ===== LEGACY ALIASES (map old names onto the new system) ===== */
+  --brand-violet:      var(--brand);
+  --brand-violet-dark: var(--brand-strong);
+  --brand-violet-soft: var(--brand-weak);
+  --brand-violet-ring: var(--brand-ring);
+
+  --sf-blue:        var(--brand);
+  --sf-blue-dark:   var(--brand-strong);
+  --sf-blue-light:  var(--brand-weak);
+  --sf-purple:      var(--brand);
+  --sf-purple-light:var(--brand-weak);
+
+  --bg-page: var(--n-25);
+  --bg-card: var(--n-0);
+  --bg-soft: var(--n-50);
+
+  --text-primary:   var(--ink-1);
+  --text-secondary: var(--ink-2);
+  --text-tertiary:  var(--ink-3);
+
+  --border-light:  var(--n-100);
+  --border-medium: var(--n-200);
+
+  --af-gradient-soft: var(--af-gradient);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--n-25);
+  font-family: -apple-system, BlinkMacSystemFont, "Salesforce Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink-1);
+  font-size: var(--text-base);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============== FOCUS RINGS ============== */
+.btn:focus-visible,
+.tab:focus-visible,
+.filter-chip:focus-visible,
+.ss-action:focus-visible,
+.topic-chip:focus-visible,
+.nav-tab:focus-visible,
+.ai-fab:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--brand-ring);
+}
+
+/* ============== MOTION SAFETY ============== */
+@media (prefers-reduced-motion: reduce) {
+  .moment-item:hover { transform: none; }
+  .eng-pulsing { animation: none; }
+  * { scroll-behavior: auto !important; }
+}
+
+/* ============== SCROLLBAR ============== */
+::-webkit-scrollbar { width: 7px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--n-200); border-radius: var(--r-sm); }
+::-webkit-scrollbar-thumb:hover { background: var(--n-300); }
