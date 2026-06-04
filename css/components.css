@@ -25,13 +25,13 @@
 }
 .video-participants-grid {
   position: absolute; inset: 0;
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; z-index: 1;
-  padding: 7% 23%; align-content: center; justify-content: center;
+  display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: 2px; z-index: 1;
+  background: #000;
 }
-.vp-tile { aspect-ratio: 1 / 1; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); border-radius: 8px; display: flex; align-items: center; justify-content: center; position: relative; }
-.vp-avatar { width: 36px; height: 36px; border-radius: 50%; color: white; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; }
-.vp-name { position: absolute; bottom: 5px; left: 7px; font-size: 9px; color: rgba(255,255,255,0.8); }
-.vp-mic { position: absolute; bottom: 5px; right: 7px; font-size: 8px; color: rgba(255,255,255,0.5); }
+.vp-tile { background: #14141C; overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative; }
+.vp-avatar { position: absolute; inset: 0; color: transparent; font-size: 0; background-size: cover; background-position: center 30%; background-repeat: no-repeat; }
+.vp-name { position: absolute; bottom: 6px; left: 6px; font-size: 10px; font-weight: 600; color: #fff; background: rgba(0,0,0,0.55); padding: 2px 7px; border-radius: 4px; z-index: 2; }
+.vp-mic { position: absolute; bottom: 8px; right: 8px; font-size: 9px; color: rgba(255,255,255,0.85); z-index: 2; }
 .play-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); z-index: 2; transition: background 0.2s; }
 .play-overlay:hover { background: rgba(0,0,0,0.25); }
 .play-button { width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,0.95); color: var(--text-primary); display: flex; align-items: center; justify-content: center; font-size: 20px; box-shadow: 0 4px 14px rgba(0,0,0,0.3); }
@@ -124,11 +124,11 @@
 .avatar { border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; flex-shrink: 0; }
 .avatar-sm { width: 24px; height: 24px; font-size: 10px; }
 .avatar-md { width: 30px; height: 30px; font-size: 11px; }
-.av-tom   { background: var(--person-tom); }
-.av-colin { background: var(--person-colin); }
-.av-steve { background: var(--person-steve); }
-.av-rachel{ background: var(--person-rachel); }
-.av-team  { background: var(--person-team); }
+.av-tom   { background-color: var(--person-tom); }
+.av-colin { background-color: var(--person-colin); }
+.av-steve { background-color: var(--person-steve); }
+.av-rachel{ background-color: var(--person-rachel); }
+.av-team  { background-color: var(--person-team); }
 
 /* ============== ACTION ITEMS ============== */
 .action-section-label { font-size: 11px; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin: 1rem 0 0.5rem; display: flex; align-items: center; gap: 0.4rem; }
@@ -189,7 +189,3 @@
   letter-spacing: 0.1px;
 }
 .agentforce-pill i { font-size: 9px; color: var(--brand-violet); }
-
-/* ============== AI FAB ============== */
-.ai-fab { position: fixed; bottom: 1.5rem; right: 1.5rem; background: var(--af-gradient); color: white; border: none; padding: 0.625rem 1.125rem; border-radius: var(--r-pill); font-size: 13px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; box-shadow: var(--shadow-2); z-index: 50; font-family: inherit; }
-.ai-fab:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); }
