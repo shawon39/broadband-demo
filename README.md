@@ -24,9 +24,9 @@ css/
   layout.css      # Page grid, cards, badges
   components.css  # Buttons, tabs, transcript, avatars, action items, video hero
   engagement.css  # Engagement tab (KPIs, charts, sentiment, talk-time)
-  agentforce.css  # Agentforce summary accent + chatbot panel
-js/main.js        # Tab switching, filters, tooltips, chatbot interactions
-assets/           # Agentforce robot/bot images
+  agentforce.css  # Agentforce summary accent
+js/main.js        # Tab switching, filters, tooltips, chapter navigation
+assets/           # Agentforce bot icon + localized participant headshots
 ```
 
 ## Embedding in Salesforce

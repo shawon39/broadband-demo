@@ -54,24 +54,26 @@ document.querySelectorAll('.eng-moment-dot').forEach(dot => {
   dot.addEventListener('mouseleave', () => engTooltip.classList.remove('visible'));
 });
 
-/* ---- Engagement: click chapter band → jump to transcript ---- */
-document.querySelectorAll('.eng-chapter-band').forEach(band => {
-  band.addEventListener('click', () => {
-    const targetId = band.dataset.chapter;
-    const target = document.getElementById(targetId);
-    if (!target) return;
+/* ---- Jump to a transcript chapter (shared by chapter bands + key moments) ---- */
+function jumpToChapter(targetId) {
+  const target = document.getElementById(targetId);
+  if (!target) return;
 
-    /* Switch to Transcript tab */
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    document.querySelector('[data-target="tab-transcript"]').classList.add('active');
-    document.getElementById('tab-transcript').classList.add('active');
+  /* Switch to Transcript tab */
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelector('[data-target="tab-transcript"]').classList.add('active');
+  document.getElementById('tab-transcript').classList.add('active');
 
-    /* Scroll + pulse */
-    setTimeout(() => {
-      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      target.classList.add('eng-pulsing');
-      setTimeout(() => target.classList.remove('eng-pulsing'), 900);
-    }, 60);
-  });
+  /* Scroll + pulse */
+  setTimeout(() => {
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    target.classList.add('eng-pulsing');
+    setTimeout(() => target.classList.remove('eng-pulsing'), 900);
+  }, 60);
+}
+
+/* Engagement chapter bands + Key Moments both jump to the transcript */
+document.querySelectorAll('.eng-chapter-band, .moment-item').forEach(el => {
+  el.addEventListener('click', () => jumpToChapter(el.dataset.chapter));
 });
