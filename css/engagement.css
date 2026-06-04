@@ -55,6 +55,7 @@
 .eng-tt-swatch.tt-tom   { background: var(--person-tom); }
 .eng-tt-swatch.tt-colin { background: var(--person-colin); }
 .eng-tt-swatch.tt-steve { background: var(--person-steve); }
+.eng-tt-swatch.tt-rachel{ background: var(--person-rachel); }
 .eng-tt-rows { display: flex; flex-direction: column; gap: 6px; }
 .eng-tt-row { display: grid; grid-template-columns: 70px 1fr; gap: 8px; align-items: center; }
 .eng-tt-row-label { font-size: 11px; color: var(--text-secondary); text-align: right; font-weight: 600; white-space: nowrap; }
@@ -63,6 +64,7 @@
 .eng-tt-seg.tt-tom   { background: var(--person-tom); }
 .eng-tt-seg.tt-colin { background: var(--person-colin); }
 .eng-tt-seg.tt-steve { background: var(--person-steve); color: white; }
+.eng-tt-seg.tt-rachel{ background: var(--person-rachel); color: white; }
 .eng-tt-overall .eng-tt-bar-wrap { height: 28px; border-radius: 6px; margin-bottom: 8px; }
 .eng-tt-overall .eng-tt-seg { font-size: 11px; }
 .eng-tt-divider { height: 1px; background: var(--border-light); margin: 8px 0; }

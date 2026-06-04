@@ -470,7 +470,7 @@
               <div class="eng-kpi-tile highlight-violet">
                 <div class="eng-kpi-label">Avg Engagement</div>
                 <div class="eng-kpi-value">78%</div>
-                <div class="eng-kpi-sub">Across all 3 participants</div>
+                <div class="eng-kpi-sub">Across all 4 participants</div>
               </div>
               <div class="eng-kpi-tile highlight-green">
                 <div class="eng-kpi-label">Peak Chapter</div>
@@ -496,6 +496,7 @@
                 <div class="eng-line-legend-item"><span class="eng-line-swatch" style="background:var(--person-tom);"></span>Tom Taylor (host)</div>
                 <div class="eng-line-legend-item"><span class="eng-line-swatch" style="background:var(--person-colin);"></span>Colin Chamberlain</div>
                 <div class="eng-line-legend-item"><span class="eng-line-swatch" style="background:var(--person-steve);"></span>Steve Jones</div>
+                <div class="eng-line-legend-item"><span class="eng-line-swatch" style="background:var(--person-rachel);"></span>Rachel Adams</div>
                 <div class="eng-line-legend-item"><span class="eng-line-swatch avg"></span><span style="color:var(--ink-3);font-weight:500;">Average</span></div>
               </div>
               <div class="engagement-chart-container">
@@ -574,6 +575,12 @@
                   <path d="M 50,140 L 82,132 L 114,148 L 178,175 L 241,118 L 289,32 L 337,132 L 384,154 L 432,136 L 488,117 L 544,85 L 600,68 L 655,94 L 712,107 L 770,115"
                         fill="none" stroke="#C7710A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
 
+                  <!-- RACHEL LINE (#B5377F) - Finance Director: low on technical chapters, spikes at Pricing &amp; Terms
+                       Points: 50,116  82,104  114,111  178,140  241,121  289,49  337,80  384,128  432,116  488,97  544,63  600,44  655,73  712,92  770,102
+                  -->
+                  <path d="M 50,116 L 82,104 L 114,111 L 178,140 L 241,121 L 289,49 L 337,80 L 384,128 L 432,116 L 488,97 L 544,63 L 600,44 L 655,73 L 712,92 L 770,102"
+                        fill="none" stroke="var(--person-rachel)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+
                   <!-- KEY MOMENT DOTS with data-* for tooltips -->
                   <!-- 04:30 scope: on Colin line (x≈122, ascending toward peak) -->
                   <circle class="eng-moment-dot" cx="122" cy="74" r="4.5" fill="#6E2BD9" stroke="white" stroke-width="1.5"
@@ -642,18 +649,20 @@
               <div class="eng-section-label"><i class="fas fa-microphone" style="margin-right:5px;color:var(--text-tertiary);"></i>Talk-time Distribution</div>
               <div class="eng-talktime-wrap">
                 <div class="eng-tt-legend">
-                  <div class="eng-tt-legend-item"><div class="eng-tt-swatch tt-tom"></div>Tom Taylor — 42%</div>
-                  <div class="eng-tt-legend-item"><div class="eng-tt-swatch tt-colin"></div>Colin Chamberlain — 38%</div>
-                  <div class="eng-tt-legend-item"><div class="eng-tt-swatch tt-steve"></div>Steve Jones — 20%</div>
+                  <div class="eng-tt-legend-item"><div class="eng-tt-swatch tt-tom"></div>Tom Taylor — 38%</div>
+                  <div class="eng-tt-legend-item"><div class="eng-tt-swatch tt-colin"></div>Colin Chamberlain — 32%</div>
+                  <div class="eng-tt-legend-item"><div class="eng-tt-swatch tt-steve"></div>Steve Jones — 18%</div>
+                  <div class="eng-tt-legend-item"><div class="eng-tt-swatch tt-rachel"></div>Rachel Adams — 12%</div>
                 </div>
                 <!-- Overall bar -->
                 <div class="eng-tt-rows">
                   <div class="eng-tt-row eng-tt-overall">
                     <div class="eng-tt-row-label" style="font-size:10px;color:var(--text-tertiary);">Overall</div>
                     <div class="eng-tt-bar-wrap">
-                      <div class="eng-tt-seg tt-tom"   style="width:42%">42%</div>
-                      <div class="eng-tt-seg tt-colin" style="width:38%">38%</div>
-                      <div class="eng-tt-seg tt-steve" style="width:20%">20%</div>
+                      <div class="eng-tt-seg tt-tom"   style="width:38%">38%</div>
+                      <div class="eng-tt-seg tt-colin" style="width:32%">32%</div>
+                      <div class="eng-tt-seg tt-steve" style="width:18%">18%</div>
+                      <div class="eng-tt-seg tt-rachel" style="width:12%">12%</div>
                     </div>
                   </div>
                   <div class="eng-tt-divider"></div>
@@ -661,57 +670,64 @@
                   <div class="eng-tt-row">
                     <div class="eng-tt-row-label">Intros</div>
                     <div class="eng-tt-bar-wrap">
-                      <div class="eng-tt-seg tt-tom"   style="width:50%"></div>
+                      <div class="eng-tt-seg tt-tom"   style="width:45%"></div>
                       <div class="eng-tt-seg tt-colin" style="width:35%"></div>
-                      <div class="eng-tt-seg tt-steve" style="width:15%"></div>
+                      <div class="eng-tt-seg tt-steve" style="width:12%"></div>
+                      <div class="eng-tt-seg tt-rachel" style="width:8%"></div>
                     </div>
                   </div>
                   <div class="eng-tt-row">
                     <div class="eng-tt-row-label">Scope</div>
                     <div class="eng-tt-bar-wrap">
-                      <div class="eng-tt-seg tt-tom"   style="width:30%"></div>
-                      <div class="eng-tt-seg tt-colin" style="width:60%"></div>
+                      <div class="eng-tt-seg tt-tom"   style="width:32%"></div>
+                      <div class="eng-tt-seg tt-colin" style="width:52%"></div>
                       <div class="eng-tt-seg tt-steve" style="width:10%"></div>
+                      <div class="eng-tt-seg tt-rachel" style="width:6%"></div>
                     </div>
                   </div>
                   <div class="eng-tt-row">
                     <div class="eng-tt-row-label" style="color:var(--warning-text);">Pricing</div>
                     <div class="eng-tt-bar-wrap">
-                      <div class="eng-tt-seg tt-tom"   style="width:25%"></div>
-                      <div class="eng-tt-seg tt-colin" style="width:15%"></div>
-                      <div class="eng-tt-seg tt-steve" style="width:60%">60%</div>
+                      <div class="eng-tt-seg tt-tom"   style="width:22%"></div>
+                      <div class="eng-tt-seg tt-colin" style="width:12%"></div>
+                      <div class="eng-tt-seg tt-steve" style="width:46%">46%</div>
+                      <div class="eng-tt-seg tt-rachel" style="width:20%">20%</div>
                     </div>
                   </div>
                   <div class="eng-tt-row">
                     <div class="eng-tt-row-label">SLAs</div>
                     <div class="eng-tt-bar-wrap">
-                      <div class="eng-tt-seg tt-tom"   style="width:35%"></div>
-                      <div class="eng-tt-seg tt-colin" style="width:55%"></div>
-                      <div class="eng-tt-seg tt-steve" style="width:10%"></div>
+                      <div class="eng-tt-seg tt-tom"   style="width:38%"></div>
+                      <div class="eng-tt-seg tt-colin" style="width:50%"></div>
+                      <div class="eng-tt-seg tt-steve" style="width:8%"></div>
+                      <div class="eng-tt-seg tt-rachel" style="width:4%"></div>
                     </div>
                   </div>
                   <div class="eng-tt-row">
                     <div class="eng-tt-row-label">Rollout</div>
                     <div class="eng-tt-bar-wrap">
-                      <div class="eng-tt-seg tt-tom"   style="width:30%"></div>
-                      <div class="eng-tt-seg tt-colin" style="width:55%"></div>
-                      <div class="eng-tt-seg tt-steve" style="width:15%"></div>
+                      <div class="eng-tt-seg tt-tom"   style="width:32%"></div>
+                      <div class="eng-tt-seg tt-colin" style="width:48%"></div>
+                      <div class="eng-tt-seg tt-steve" style="width:12%"></div>
+                      <div class="eng-tt-seg tt-rachel" style="width:8%"></div>
                     </div>
                   </div>
                   <div class="eng-tt-row">
                     <div class="eng-tt-row-label">Terms</div>
                     <div class="eng-tt-bar-wrap">
-                      <div class="eng-tt-seg tt-tom"   style="width:50%">50%</div>
-                      <div class="eng-tt-seg tt-colin" style="width:30%"></div>
-                      <div class="eng-tt-seg tt-steve" style="width:20%"></div>
+                      <div class="eng-tt-seg tt-tom"   style="width:40%">40%</div>
+                      <div class="eng-tt-seg tt-colin" style="width:25%"></div>
+                      <div class="eng-tt-seg tt-steve" style="width:15%"></div>
+                      <div class="eng-tt-seg tt-rachel" style="width:20%">20%</div>
                     </div>
                   </div>
                   <div class="eng-tt-row">
                     <div class="eng-tt-row-label">Wrap-up</div>
                     <div class="eng-tt-bar-wrap">
-                      <div class="eng-tt-seg tt-tom"   style="width:45%"></div>
-                      <div class="eng-tt-seg tt-colin" style="width:35%"></div>
-                      <div class="eng-tt-seg tt-steve" style="width:20%"></div>
+                      <div class="eng-tt-seg tt-tom"   style="width:42%"></div>
+                      <div class="eng-tt-seg tt-colin" style="width:33%"></div>
+                      <div class="eng-tt-seg tt-steve" style="width:15%"></div>
+                      <div class="eng-tt-seg tt-rachel" style="width:10%"></div>
                     </div>
                   </div>
                 </div>
@@ -728,7 +744,7 @@
                   <span class="eng-legend-chapter">Intros</span>
                   <span class="eng-legend-time">00:00 – 04:00</span>
                   <span class="eng-legend-signal"><span class="badge">Neutral</span></span>
-                  <span class="eng-legend-takeaway">All three engaged at moderate levels — Tom 85%, Colin 70%, Steve 55%. Tom dominated talk-time (50%) setting the agenda.</span>
+                  <span class="eng-legend-takeaway">All four engaged at moderate levels — Tom 85%, Colin 70%, Rachel 65%, Steve 55%. Tom dominated talk-time (45%) setting the agenda.</span>
                 </div>
 
                 <div class="engagement-legend-row">
@@ -744,7 +760,7 @@
                   <span class="eng-legend-chapter">Pricing</span>
                   <span class="eng-legend-time">12:00 – 18:00</span>
                   <span class="eng-legend-signal"><span class="badge warning">Concern</span></span>
-                  <span class="eng-legend-takeaway">Steve spiked to 95% — his most active chapter, driving 60% of talk-time with back-to-back pricing and price-lock objections. Colin dipped -27pts. Revisit TCO framing and price-lock terms before next call.</span>
+                  <span class="eng-legend-takeaway">Steve spiked to 95% — his most active chapter, driving 46% of talk-time with back-to-back pricing and price-lock objections. Rachel (Finance) re-engaged to 88%, scrutinising the numbers alongside him (20% talk-time). Colin dipped -27pts. Revisit TCO framing and price-lock terms before next call.</span>
                 </div>
 
                 <div class="engagement-legend-row">
@@ -760,7 +776,7 @@
                   <span class="eng-legend-chapter">Rollout</span>
                   <span class="eng-legend-time">24:00 – 31:00</span>
                   <span class="eng-legend-signal"><span class="badge success">Decision</span></span>
-                  <span class="eng-legend-takeaway">Consistent high engagement across all three (avg ~78%) as the phased plan took shape. Colin owned 55% of talk-time agreeing the London-first sequence.</span>
+                  <span class="eng-legend-takeaway">Consistent high engagement across all four (avg ~78%) as the phased plan took shape. Colin owned 48% of talk-time agreeing the London-first sequence.</span>
                 </div>
 
                 <div class="engagement-legend-row">
@@ -768,7 +784,7 @@
                   <span class="eng-legend-chapter">Terms</span>
                   <span class="eng-legend-time">31:00 – 38:00</span>
                   <span class="eng-legend-signal"><span class="badge success">Buying signal</span></span>
-                  <span class="eng-legend-takeaway">Highest avg engagement of the call (86%). Tom peaked at 92%. Steve re-engaged at 80% — his constructive tone on the 36-month term is a clear close signal. Tom held 50% talk-time.</span>
+                  <span class="eng-legend-takeaway">Highest avg engagement of the call (86%). Tom peaked at 92%. Steve re-engaged at 80% — his constructive tone on the 36-month term is a clear close signal. Rachel (Finance) was highly active at 90% with 20% talk-time, signalling finance sign-off. Tom held 40% talk-time.</span>
                 </div>
 
                 <div class="engagement-legend-row">
